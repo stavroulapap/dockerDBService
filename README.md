@@ -1,2 +1,2 @@
 # dockerDBService
-Test Repository for experimentint with Docker Services (NGinx, MariaDB)
+Test Repository for experimenting with Docker Services (NGinx, MariaDB)
