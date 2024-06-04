@@ -1,4 +1,4 @@
-# dockerDBService -- Test Repository for experimenting with Docker Services (NGinx, MariaDB)
+# Test Repository for experimenting with Docker Services (NGinx, MariaDB) - dockerDBService
 
 In this repository we will walk you through the process of deploying a PHP web application using Docker Compose, Nginx as the web server, and MariaDB as the database.
 
