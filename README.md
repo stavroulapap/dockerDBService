@@ -1,11 +1,10 @@
-## dockerDBService
-Test Repository for experimenting with Docker Services (NGinx, MariaDB)
+# dockerDBService -- Test Repository for experimenting with Docker Services (NGinx, MariaDB)
 
 In this repository we will walk you through the process of deploying a PHP web application using Docker Compose, Nginx as the web server, and MariaDB as the database.
 
 Let’s dive into the steps to create and deploy this PHP web application.
 
-# Step 1 — Create a Nginx Container
+## Step 1 — Create a Nginx Container
 
 We will set up an Nginx container to host our PHP application with the following steps:
 
@@ -33,7 +32,7 @@ docker ps
 ```
 5. Open your web browser and access your Nginx container using the URL `http://localhost:7000` and we see the Nginx page.
    
-# Step 2 — Create a PHP Container
+## Step 2 — Create a PHP Container
 
 
 
