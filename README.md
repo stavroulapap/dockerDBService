@@ -8,7 +8,7 @@ Let’s dive into the steps to create and deploy this PHP web application.
 
 We will set up an Nginx container to host our PHP application with the following steps:
 
-1. Create a directory for your project and navigate to it:
+1. Create a directory for our project and navigate to it:
 ```bash
 ~$ mkdir docker-project
 ~$ cd docker-project
@@ -30,7 +30,7 @@ docker-compose up -d
 ```bash
 docker ps
 ```
-5. Open your web browser and access your Nginx container using the URL `http://localhost:7000` with the port 7000 and we see the Nginx page.
+5. Open your web browser and access your Nginx container using the URL `http://localhost:7000` with the port 7000 and we will see the Nginx page.
    
 ## Step 2 — Create a PHP Container
 
