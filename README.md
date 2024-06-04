@@ -39,11 +39,12 @@ And we will see this output:
 CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS         PORTS                                   NAMES
 c5ebf401dd3c   nginx:latest   "/docker-entrypoint.…"   17 hours ago   Up 5 minutes   0.0.0.0:7000->80/tcp, :::7000->80/tcp   nginx-container
 ```
+>If did not work, we start from the beginning. So:
 >In order to stop the running containers we use the command:
 - docker stop $(docker ps -aq)
 >In order to remove all the containers we use the command:
 - docker rm $(docker ps -aq)
->Run the following command to make sure there are no active containers:
+>Run the following command to make sure there are no active containers(because we did the stop and remove commands):
 - docker ps
 
 5. Open our web browser and access our Nginx container using the URL `http://localhost:7000` ,with the port 7000 and we will see the Nginx page.
