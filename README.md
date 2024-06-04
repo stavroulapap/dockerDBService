@@ -39,15 +39,15 @@ And we will see this output:
 CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS         PORTS                                   NAMES
 c5ebf401dd3c   nginx:latest   "/docker-entrypoint.…"   17 hours ago   Up 5 minutes   0.0.0.0:7000->80/tcp, :::7000->80/tcp   nginx-container
 ```
->In order to stop the running containers we use the command:
+-In order to stop the running containers we use the command:
 > ```bash
 > docker stop $(docker ps -aq)
 >```
-> In order to remove all the containers we use the command:
+- In order to remove all the containers we use the command:
 > ```bash
 >docker rm $(docker ps -aq)
 >```
->Run the following command to make sure there are no active containers:
+-Run the following command to make sure there are no active containers:
 > ```bash
 >docker ps
 >```
