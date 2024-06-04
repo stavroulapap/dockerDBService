@@ -10,8 +10,8 @@ We will set up an Nginx container to host our PHP application with the following
 
 1. Create a directory for our project and navigate to it:
 ```bash
-~$ mkdir docker-project
-~$ cd docker-project
+mkdir docker-project
+cd docker-project
 ```
 
 2. Create a `docker-compose.yml` file for launching the Nginx container:
