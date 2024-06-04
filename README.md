@@ -18,9 +18,9 @@ cd docker-project
 ```bash
 nano docker-compose.yml
 ```
-
 The configuration of the code is in the `docker-compose.yml` file above on this repository.
 This configuration ensures that the Nginx container runs on port 7000:80.
+
 3. Launch the Nginx container:
 ```bash
 docker-compose up -d
