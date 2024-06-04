@@ -40,6 +40,7 @@ CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS    
 c5ebf401dd3c   nginx:latest   "/docker-entrypoint.…"   17 hours ago   Up 5 minutes   0.0.0.0:7000->80/tcp, :::7000->80/tcp   nginx-container
 ```
 >If did not work, we start from the beginning. So:
+
 >In order to stop the running containers we use the command:
 - docker stop $(docker ps -aq)
 >In order to remove all the containers we use the command:
