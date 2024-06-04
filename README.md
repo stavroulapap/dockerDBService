@@ -18,26 +18,28 @@ cd docker-project
 ```bash
 nano docker-compose.yml
 ```
+
 The configuration of the code is in the `docker-compose.yml` file above on this repository.
 This configuration ensures that the Nginx container runs on port 7000:80.
-
 3. Launch the Nginx container:
 ```bash
 docker-compose up -d
 ```
-If everything works perfect it will be appeared the following statement:
+If everything works perfect with the above command, it will be appeared the following statement:
 ```bash
 Starting nginx-container ... done
 ```
+
 4. Verify that the Nginx container is running:
 ```bash
 docker ps
 ```
-And we see this output:
+And we will see this output:
 ```bash
 CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS         PORTS                                   NAMES
 c5ebf401dd3c   nginx:latest   "/docker-entrypoint.…"   17 hours ago   Up 5 minutes   0.0.0.0:7000->80/tcp, :::7000->80/tcp   nginx-container
 ```
+
 5. Open our web browser and access our Nginx container using the URL `http://localhost:7000` ,with the port 7000 and we will see the Nginx page.
    
 ## Step 2 — Create a PHP Container
