@@ -30,7 +30,7 @@ docker-compose up -d
 ```bash
 docker ps
 ```
-5. Open your web browser and access your Nginx container using the URL `http://localhost:7000` and we see the Nginx page.
+5. Open your web browser and access your Nginx container using the URL `http://localhost:7000` with the port 7000 and we see the Nginx page.
    
 ## Step 2 — Create a PHP Container
 
