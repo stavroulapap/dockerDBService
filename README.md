@@ -26,7 +26,7 @@ This configuration ensures that the Nginx container runs on port 7000:80.
 docker-compose up -d
 ```
 If everything works perfect it will be appeared the following statement:
-``bash
+```bash
 Starting nginx-container ... done
 ```
 4. Verify that the Nginx container is running:
@@ -34,7 +34,7 @@ Starting nginx-container ... done
 docker ps
 ```
 And we see this output:
-``bash
+```bash
 CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS         PORTS                                   NAMES
 c5ebf401dd3c   nginx:latest   "/docker-entrypoint.…"   17 hours ago   Up 5 minutes   0.0.0.0:7000->80/tcp, :::7000->80/tcp   nginx-container
 ```
