@@ -49,7 +49,8 @@ c5ebf401dd3c   nginx:latest   "/docker-entrypoint.…"   17 hours ago   Up 5 min
 >Run the following command to make sure there are no active containers(because we did the stop and remove commands):
 - docker ps
 
-Let's go to the next step 😄
+Now, Let's go to the next step!!!😄
+
 ## Step 2 — Create a PHP Container
 
 
