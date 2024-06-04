@@ -2,7 +2,7 @@
 
 In this repository we will walk you through the process of deploying a PHP web application using Docker Compose, Nginx as the web server, and MariaDB as the database.
 
-Since we have downloaded the docker..Let’s dive into the steps to create and deploy this PHP web application. 😎
+Since we have downloaded the docker....Let’s dive into the steps to create and deploy this PHP web application. 😎
 
 ## Step 1 — Create a Nginx Container
 
