@@ -41,7 +41,7 @@ c5ebf401dd3c   nginx:latest   "/docker-entrypoint.…"   17 hours ago   Up 5 min
 ```
 
 5. Open our web browser and access our Nginx container using the URL `http://localhost:7000` ,with the port 7000 and we will see the Nginx page. ✅
-![Example Image] (https://raw.githubusercontent.com/stavroulapap/dockerDBService/master/ImageNGINX.png)
+![Example Image](https://raw.githubusercontent.com/stavroulapap/dockerDBService/master/ImageNGINX.png)
 
 - [ ] In case of errors :bug::
 >In order to stop the running containers we use the command:
