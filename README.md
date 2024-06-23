@@ -18,7 +18,7 @@ If you do decide to edit these, please refer to Step 2 for further guidance.
 The necessary commands are listed under `commands.txt`. You can use the `cat commands.txt` command to easily copy and paste as you go along.
 To initialize the docker containers, execute the following command:
 ```bash
-docker compose -f docker-compose.yaml up -d
+docker compose -f docker-compose.yml up -d
 ```
 To ensure everything is in working order, you should see 3 containers when using the following command.
 
@@ -37,18 +37,18 @@ where `<@user>` is your system user.
 
 ## Step 3 - Populating your Database
 
-Using a browser of your choice, connect to PHPMyAdmin via link:localhost:8083[localhost:8083] and create your first table in `docker_db`. You can find a prepared example in `create_db.sql` .
+Using a browser of your choice, connect to PHPMyAdmin via link `localhost:8083` and create your first table in `docker_db`. You can find a prepared example in `create_db.sql` .
 
 ## Step 4 - Database View
 
-Once your table is populated, you can view the results in link:localhost:8000[localhost:8000].
+Once your table is populated, you can view the results in link `localhost:8000`.
 
 ## Step 5 - Shutdown containers
 
 Finally, you can call it quits by executing the following:
 
 ```bash
-docker compose -f docker-compose.yaml down
+docker compose -f docker-compose.yml down
 ```
 
 
