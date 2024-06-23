@@ -37,11 +37,11 @@ where `<@user>` is your system user.
 
 ## Step 3 - Populating your Database
 
-Using a browser of your choice, connect to PHPMyAdmin via {localhost:8083}[Google] and create your first table in `docker_db`. You can find a prepared example in `create_db.sql` .
+Using a browser of your choice, connect to PHPMyAdmin via link:localhost:8083[localhost:8083] and create your first table in `docker_db`. You can find a prepared example in `create_db.sql` .
 
 ## Step 4 - Database View
 
-Once your table is populated, you can view the results in {localhost:8000}[Google].
+Once your table is populated, you can view the results in link:localhost:8000[localhost:8000].
 
 ## Step 5 - Shutdown containers
 
