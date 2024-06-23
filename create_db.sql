@@ -9,6 +9,6 @@ CREATE TABLE students
  email VARCHAR(255) NULL ,
  PRIMARY KEY (id));
 
-INSERT INTO students VALUES ('1','Stavroula','Papoutsi','19390187','10','ice19390187@uniwa.gr');
-INSERT INTO students VALUES ('2','Efthimis','Fotopoulos','19390246','10','ice19390246@uniwa.gr');
+INSERT INTO students VALUES ('1','Master','Student','19390xx','10','dummy-email@uniwa.gr');
+INSERT INTO students VALUES ('2','Slave','Worker','19390xxx','10','spam-mail@uniwa.gr');
 
