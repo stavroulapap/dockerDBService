@@ -1,59 +1,56 @@
-# Test Repository for experimenting with Docker Services (NGinx, MariaDB) - dockerDBService
+This purpose of this repository is to familiarize oneself with the basics of container creation and connectivity between containers. Below you will find intstuctions to ensure the proper working order of your multi-service docker network.
 
-In this repository we will walk you through the process of deploying a PHP web application using Docker Compose, Nginx as the web server, and MariaDB as the database.
+# Instructions
+## Step 0 - Personalizing your DB
 
-Since we have downloaded the docker....Let’s dive into the steps to create and deploy this PHP web application. 😎
+You can edit the contents of the `docker-compose.yml` to edit the ports and DB information if you would so like. Below are the default values:
 
-## Step 1 — Create a Nginx Container
-
-We will set up an Nginx container to host our PHP application with the following steps:
-
-1. Create a directory for our project and navigate to it:
-```bash
-mkdir docker-project
-cd docker-project
 ```
-
-2. Create a `docker-compose.yml` script for launching the Nginx container:
-```bash
-nano docker-compose.yml
+MYSQL_ROOT_PASSWORD: root
+MYSQL_DATABASE: docker_db
+MYSQL_USER: uniwa
+MYSQL_PASSWORD: pada
 ```
-The configuration of the code is in the `docker-compose.yml` script above on this repository.
-This configuration ensures that the Nginx container runs on port 7000:80.
+If you do decide to edit these, please refer to Step 1.5 for further guidance.
 
-3. Launch the Nginx container:
-```bash
-docker-compose up -d
-```
-If everything works perfect with the above command, it will be appeared the following statement:
-```bash
-Starting nginx-container ... done
-```
+## Step 1 — Initialize the docker containers
 
-4. Verify that the Nginx container is running:
+To initialize the docker containers, execute the following command:
+```bash
+./up.sh
+```
+To ensure everything is in working order, you should see 3 containers when using the following command.
+
 ```bash
 docker ps
 ```
-And we will see this output:
+
+## OPTIONAL - Step 1.5 — Ownership of the mounted local volume
+
+In case of changes to the defaul DB parametres, you will need to change their references in the `index.php`file as well. To do so, you will require the necessary permissions to edit the `index.php` file.
+The necessary command is listed under `command.txt`. You can use the `cat command.txt` command to easily copy and paste:
+
 ```bash
-CONTAINER ID   IMAGE          COMMAND                  CREATED        STATUS         PORTS                                   NAMES
-c5ebf401dd3c   nginx:latest   "/docker-entrypoint.…"   17 hours ago   Up 5 minutes   0.0.0.0:7000->80/tcp, :::7000->80/tcp   nginx-container
+sudo chown -R <@user> php
+```
+where `<@user>` is your system user.
+
+## Step 2 - Populating your Database
+
+Using a browser of your choice, connect to PHPMyAdmin via link `localhost:8083` and create your first table in `docker_db`. You can find a prepared example in `create_db.sql` .
+
+## Step 3 - Database View
+
+Once your table is populated, you can view the results in link `localhost:8000`.
+
+## Step 4 - Shutdown containers
+
+Finally, you can call it quits by executing the following:
+
+```bash
+./shutdown.sh
 ```
 
-5. Open our web browser and access our Nginx container using the URL `http://localhost:7000` ,with the port 7000 and we will see the Nginx page as shown below (The image is also in `ImageNGINX.png`). ✅
-![Example Image](https://raw.githubusercontent.com/stavroulapap/dockerDBService/master/ImageNGINX.png)
-
-- [ ] In case of errors :bug::
->In order to stop the running containers we use the command:
-- docker stop $(docker ps -aq)
->In order to remove all the containers we use the command:
-- docker rm $(docker ps -aq)
->Run the following command to make sure there are no active containers(because we did the stop and remove commands):
-- docker ps
-
-Now, Let's go to the next step!!!😄
-
-## Step 2 — Create a PHP Container
 
 
 

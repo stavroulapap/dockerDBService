@@ -1,7 +1,39 @@
-version: "3.9"
+version: '3.8'
 services:
-    nginx:
-      image: nginx:latest
-      container_name: nginx-container
-      ports:
-       - 7000:80
+  nginx:
+    image: wyveo/nginx-php-fpm:php82
+    container_name: nginx-container
+    ports:
+      - 8000:80
+    volumes: #local directory mount
+      - ./php:/usr/share/nginx/html
+    depends_on: #connect php webpage to mysql database
+      - mysqldb
+
+
+  mysqldb:
+    image: mysql:5.7
+    container_name: mysqldb
+    restart: always
+    environment: #initialize root & user credentials, create database
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: docker_db
+      MYSQL_USER: uniwa
+      MYSQL_PASSWORD: pada
+    ports:
+      - "9906:3306"
+    volumes:
+      - db_contents:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin:5.2.1
+    restart: always
+    environment:
+      PMA_HOST: mysqldb
+    ports:
+      - 8083:80
+    depends_on: #connect phpmyadmin to mysql database
+      - mysqldb
+
+volumes:
+  db_contents:
