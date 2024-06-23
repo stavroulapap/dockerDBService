@@ -1,0 +1,8 @@
+>Change owner for php mounted volume
+sudo chown -R <@user> php
+
+>Initialize containers
+docker compose -f docker-compose.yaml up -d
+
+>Shutdown containers
+docker compose -f docker-compose.yaml down

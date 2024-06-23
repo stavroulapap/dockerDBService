@@ -5,9 +5,9 @@ services:
     container_name: nginx-container
     ports:
       - 8000:80
-    volumes:
+    volumes: #local directory mount
       - ./php:/usr/share/nginx/html
-    depends_on:
+    depends_on: #connect php webpage to mysql database
       - mysqldb
 
 
@@ -15,7 +15,7 @@ services:
     image: mysql:5.7
     container_name: mysqldb
     restart: always
-    environment:
+    environment: #initialize root & user credentials, create database
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: docker_db
       MYSQL_USER: uniwa
@@ -32,7 +32,7 @@ services:
       PMA_HOST: mysqldb
     ports:
       - 8083:80
-    depends_on:
+    depends_on: #connect phpmyadmin to mysql database
       - mysqldb
 
 volumes:
