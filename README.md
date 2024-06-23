@@ -11,14 +11,13 @@ MYSQL_DATABASE: docker_db
 MYSQL_USER: uniwa
 MYSQL_PASSWORD: pada
 ```
-If you do decide to edit these, please refer to Step 2 for further guidance.
+If you do decide to edit these, please refer to Step 1.5 for further guidance.
 
 ## Step 1 — Initialize the docker containers
 
-The necessary commands are listed under `commands.txt`. You can use the `cat commands.txt` command to easily copy and paste as you go along.
 To initialize the docker containers, execute the following command:
 ```bash
-docker compose -f docker-compose.yml up -d
+./up.sh
 ```
 To ensure everything is in working order, you should see 3 containers when using the following command.
 
@@ -26,29 +25,30 @@ To ensure everything is in working order, you should see 3 containers when using
 docker ps
 ```
 
-## Step 2 — Ownership of the mounted local volume
+## OPTIONAL - Step 1.5 — Ownership of the mounted local volume
 
-In case of changes to the defaul DB parametres, you will need to change their references in the `index.php`file as well. To do so, you will require the necessary permissions to edit the `index.php` file, by executing:
+In case of changes to the defaul DB parametres, you will need to change their references in the `index.php`file as well. To do so, you will require the necessary permissions to edit the `index.php` file.
+The necessary command is listed under `command.txt`. You can use the `cat command.txt` command to easily copy and paste:
 
 ```bash
 sudo chown -R <@user> php
 ```
 where `<@user>` is your system user.
 
-## Step 3 - Populating your Database
+## Step 2 - Populating your Database
 
 Using a browser of your choice, connect to PHPMyAdmin via link `localhost:8083` and create your first table in `docker_db`. You can find a prepared example in `create_db.sql` .
 
-## Step 4 - Database View
+## Step 3 - Database View
 
 Once your table is populated, you can view the results in link `localhost:8000`.
 
-## Step 5 - Shutdown containers
+## Step 4 - Shutdown containers
 
 Finally, you can call it quits by executing the following:
 
 ```bash
-docker compose -f docker-compose.yml down
+./shutdown.sh
 ```
 
 
